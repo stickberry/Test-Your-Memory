@@ -1,0 +1,53 @@
+</!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content = "width=device">
+	<meta name = "description" content = "Weather App">  
+	<meta name = "keyword" content = "Memory Game, easy javascript games"> 
+	<meta name = "author" content = "Elaine Mary Rose">
+	
+	<title> Memory Game </title>
+
+	<script>
+		
+		var cards_array = ['1','2','3','4','5','6', '7', '8', '9', '10', '11', '12','1','2','3','4','5','6', '7', '8', '9', '10', '11', '12'];
+		var tiles_flipped = 0;
+		var cards_values = [];
+		var cards_tile_ids=[];
+
+		Array.prototype.cards_tile_shuffle = function() {
+
+			var i = this.length, j, temp;
+			while( i-- > 0) {
+
+				j = Math.floor(Math.random() * (i+1));
+				temp = this[j];
+				this[j] = this[i];
+				this[i] = temp;
+			}
+		}	
+
+		function newBoard() {
+
+			tiles_flipped = 0;
+			var ans = '';
+			cards_array.cards_tile_shuffle();
+			for ( var i = 0; i < cards_array.length; ++i) {
+
+				ans = ans + '<div id="tile_'+i+'"onclick="fliptile(this,\''+cards_array[i]+'\')"></div>';
+			}
+			document.getElementById('board').innerHTML = ans;
+		}
+  
+	</script>
+	
+	<link rel = "stylesheet" href = "game.css">
+
+</head>
+<body>
+
+	<div id = "board"></div>
+	<script>newBoard();</script>
+</body>
+</html>
