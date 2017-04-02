@@ -1,0 +1,25 @@
+#board {
+
+	background: #474747;
+	border: #000000 3px solid;
+	width: 825px;
+	height: 540px;
+	padding: 24px;
+	margin: 0px auto;
+	margin-top: 20px;
+}
+
+div#board > div {
+
+	background: url(cube.png) no-repeat;
+	border: #000 1px solid;
+	width: 75px;
+	height: 75px;
+	float: left;
+	margin: 10px;
+	padding: 20px;
+	font-size: 64px;
+	cursor: pointer; /*do something*/
+	text-align: center;
+}
+ 
