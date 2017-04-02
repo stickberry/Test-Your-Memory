@@ -39,6 +39,55 @@
 			}
 			document.getElementById('board').innerHTML = ans;
 		}
+
+		function fliptile(tile,val) {
+
+			if(tile.innerHTML == "" && cards_values.length < 2) {
+
+				tile.style.background = '#FFFFFF';
+				tile.innerHTML = val;
+				if ( cards_values.length == 0 ) {
+
+					cards_values.push(val);
+					cards_tile_ids.push(tile.id);
+				}
+				else if (cards_values.length == 1) {
+
+					cards_values.push(val);
+					cards_tile_ids.push(tile.id);
+					if(cards_values[0] == cards_values[1]) {
+
+						tiles_flipped = tiles_flipped + 2;
+
+						cards_values = [];
+						cards_tile_ids = [];
+
+						if(tiles_flipped == cards_array.length) {
+
+							alert("Board cleared... Generating New Board");
+							document.getElementById('board').innerHTML = "";
+							newBoard();
+						}
+					} 
+					else {
+
+						function flipback() {
+
+							var tile_1 = document.getElementById(cards_tile_ids[0]);
+							var tile_2 = document.getElementById(cards_tile_ids[1]);
+							tile_1.style.background = 'url(cube.png) no-repeat';
+							tile_1.innerHTML = "";
+							tile_2.style.background = 'url(cube.png) no-repeat';
+							tile_2.innerHTML = "";
+
+							cards_values = [];
+							cards_tile_ids = [];
+						}
+						setTimeout(flipback,500);
+					}
+				}
+			}
+		}
   
 	</script>
 	
