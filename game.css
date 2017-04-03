@@ -1,19 +1,25 @@
+body {
+
+	background: black;
+	background-size: cover;
+}
 #board {
 
-	background: url(board.jpg) no-repeat;
-	border: #000000 3px solid;
-	width: 825px;
-	height: 540px;
+	background: white;
+	background-size: cover;
+	
+	width: 1170px;
+	height: 548px;
 	padding: 24px;
 	margin: 0px auto;
-	margin-top: 20px;
+	margin-top: 25px;
 }
 
 div#board > div {
 
-	background: url(col_block.jpeg) no-repeat;
-	border: #000 1px solid;
-	width: 75px;
+	background: url(cube.png) no-repeat;
+	border: #ffffff 2px solid;
+	width: 130px;
 	height: 75px;
 	float: left;
 	margin: 10px;
@@ -21,6 +27,7 @@ div#board > div {
 	font-size: 64px;
 	cursor: pointer; /*do something*/
 	text-align: center;
+	color: white;
 }
 
 
