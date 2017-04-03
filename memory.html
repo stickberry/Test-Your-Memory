@@ -12,11 +12,12 @@
 
 	<script>
 		
-		var cards_array = ['1','2','3','4','5','6', '7', '8', '9', '10', '11', '12','1','2','3','4','5','6', '7', '8', '9', '10', '11', '12'];
+		var cards_array = ['1','1','2','2','3','3','4','4','5','5','6','6','7','7','8','8','9','9','10','10','11','11','12','12'];
 		var tiles_flipped = 0;
 		var cards_values = [];
 		var cards_tile_ids=[];
 
+		
 		Array.prototype.cards_tile_shuffle = function() {
 
 			var i = this.length, j, temp;
@@ -45,7 +46,33 @@
 
 			if(tile.innerHTML == "" && cards_values.length < 2) {
 
+				if(val == '1' || val == '7'){
+
+					tile.style.background = '#b2cb05';
+				}
+				else if (val == '2' || val == '8'){
+
+					tile.style.background = '#f3c403';
+				}
+				else if (val == '3' || val == '9'){
+
+					tile.style.background = '#048fcc';
+				}
+				else if (val == '4' || val == '10'){
+
+					tile.style.background = '#f38408';
+				}
+				else if (val == '5' || val == '11'){
+
+					tile.style.background = '#cd0d0d';
+				}
+				else if (val == '6' || val == '12'){
+
+					tile.style.background = '#d81954';
+				}
+				else{
 				tile.style.background = '#FFFFFF';
+				}
 				tile.innerHTML = val;
 				if ( cards_values.length == 0 ) {
 
@@ -76,9 +103,9 @@
 
 							var tile_1 = document.getElementById(cards_tile_ids[0]);
 							var tile_2 = document.getElementById(cards_tile_ids[1]);
-							tile_1.style.background = 'url(cube.png) no-repeat';
+							tile_1.style.background = 'url(col_block.jpeg) no-repeat';
 							tile_1.innerHTML = "";
-							tile_2.style.background = 'url(cube.png) no-repeat';
+							tile_2.style.background = 'url(col_block.jpeg) no-repeat';
 							tile_2.innerHTML = "";
 
 							cards_values = [];
@@ -97,6 +124,7 @@
 </head>
 <body>
 
+	
 	<div id = "board"></div>
 	<script>newBoard();</script>
 </body>
