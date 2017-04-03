@@ -20,3 +20,42 @@ body {
    background-position: -20% 70px, -1000px 0px, 0px 0px;
   }
 }
+
+.box {
+
+  color: white;
+  font-family: 'Mouse Memoirs', sans-serif;
+  font-size: 70px;
+  padding-top: 200px;
+  text-align: center;
+}
+
+.image {
+
+  margin-top: 10px;
+}
+
+#red {
+
+  color: #cd0d0d;
+}
+
+#orange {
+
+  color: #f38408;
+}
+
+#blue{
+
+  color: #048fcc;
+}
+
+#yellow {
+
+  color: #f3c403;
+}
+
+#green {
+
+  color: #b2cb05;
+}
