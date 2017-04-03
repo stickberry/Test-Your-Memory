@@ -1,6 +1,6 @@
 #board {
 
-	background: #474747;
+	background: url(board.jpg) no-repeat;
 	border: #000000 3px solid;
 	width: 825px;
 	height: 540px;
@@ -11,7 +11,7 @@
 
 div#board > div {
 
-	background: url(cube.png) no-repeat;
+	background: url(col_block.jpeg) no-repeat;
 	border: #000 1px solid;
 	width: 75px;
 	height: 75px;
@@ -22,4 +22,6 @@ div#board > div {
 	cursor: pointer; /*do something*/
 	text-align: center;
 }
+
+
  
