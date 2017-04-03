@@ -16,8 +16,8 @@
 		var tiles_flipped = 0;
 		var cards_values = [];
 		var cards_tile_ids=[];
+		var counter; 
 
-		
 		Array.prototype.cards_tile_shuffle = function() {
 
 			var i = this.length, j, temp;
@@ -32,6 +32,7 @@
 
 		function newBoard() {
 
+			counter = 0;
 			tiles_flipped = 0;
 			var ans = '';
 			cards_array.cards_tile_shuffle();
@@ -44,6 +45,7 @@
 
 		function fliptile(tile,val) {
 
+			counter++;
 			if(tile.innerHTML == "" && cards_values.length < 2) {
 
 				if(val == '1' || val == '7'){
@@ -56,7 +58,7 @@
 				}
 				else if (val == '3' || val == '9'){
 
-					tile.style.background = '#048fcc';
+					tile.style.background = '#b2cb05';
 				}
 				else if (val == '4' || val == '10'){
 
@@ -64,14 +66,15 @@
 				}
 				else if (val == '5' || val == '11'){
 
-					tile.style.background = '#cd0d0d';
+					tile.style.background = '#f38408';
 				}
 				else if (val == '6' || val == '12'){
 
-					tile.style.background = '#d81954';
+					tile.style.background = '#f3c403';
 				}
 				else{
-				tile.style.background = '#FFFFFF';
+
+					tile.style.background = '#FFFFFF';
 				}
 				tile.innerHTML = val;
 				if ( cards_values.length == 0 ) {
@@ -103,9 +106,9 @@
 
 							var tile_1 = document.getElementById(cards_tile_ids[0]);
 							var tile_2 = document.getElementById(cards_tile_ids[1]);
-							tile_1.style.background = 'url(col_block.jpeg) no-repeat';
+							tile_1.style.background = 'url(cube.png) no-repeat';
 							tile_1.innerHTML = "";
-							tile_2.style.background = 'url(col_block.jpeg) no-repeat';
+							tile_2.style.background = 'url(cube.png) no-repeat';
 							tile_2.innerHTML = "";
 
 							cards_values = [];
