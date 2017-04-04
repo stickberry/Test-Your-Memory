@@ -4,6 +4,28 @@ body {
 	background-size: cover;
 }
 
+#score {
+
+	color: white;
+	display: inline;
+	font-family: 'Cinzel';
+	font-size: 25px;
+	margin-left: 130px;
+	padding-top: 15px;
+	
+}
+
+#pos {
+
+	color: orange;
+}
+
+#moves {
+
+	color: orange;
+}
+
+
 #main {
 
 	color: white;
@@ -11,7 +33,8 @@ body {
 	font-family: 'Cinzel Decorative';
 	font-weight: bold;
 	font-size: 50px;
-	padding-left: 420px;
+	padding-left: 260px;
+	
 }
 
 #move {
@@ -21,8 +44,9 @@ body {
 	float: right;
 	font-size: 25px;
 	color: white;
-	padding-top: 15px;
-	padding-right: 200px;
+	padding-top: 17px;
+	padding-right: 130px;
+	
 }
 
 #board {
@@ -51,6 +75,16 @@ div#board > div {
 	text-align: center;
 	color: white;
 }
+
+.effect {
+
+   -webkit-box-shadow: -6px 7px 4px -8px rgba(255,255,255,1);
+   -moz-box-shadow: -6px 7px 4px -8px rgba(255,255,255,1);
+   box-shadow: -6px 7px 4px -8px rgba(255,255,255,1);
+}  
+ 
+
+
 
 
  
