@@ -32,10 +32,11 @@
 
 		function newBoard() {
 
-			counter = 0;
+			counter = 40;
 			tiles_flipped = 0;
 			var ans = '';
 			cards_array.cards_tile_shuffle();
+			document.getElementById('moves').innerHTML = counter;
 			for ( var i = 0; i < cards_array.length; ++i) {
 
 				ans = ans + '<div id="tile_'+i+'"onclick="fliptile(this,\''+cards_array[i]+'\')"></div>';
@@ -45,7 +46,14 @@
 
 		function fliptile(tile,val) {
 
-			counter++;
+			counter--;
+			document.getElementById('moves').innerHTML = counter;
+			if(counter < 0){
+
+				alert("You're out of moves! Click to play again!");
+				document.getElementById('board').innerHTML = "";
+				newBoard();
+			}
 			if(tile.innerHTML == "" && cards_values.length < 2) {
 
 				if(val == '1' || val == '7'){
@@ -122,12 +130,17 @@
   
 	</script>
 	
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet"> 
 	<link rel = "stylesheet" href = "game.css">
 
 </head>
 <body>
 
-	
+	<div id = "main">
+		Ace it in 40!
+	</div>
+		<div id = "move">Moves left : <span> </span><span id = "moves"> </span></div>
 	<div id = "board"></div>
 	<script>newBoard();</script>
 </body>
