@@ -8,8 +8,25 @@
   <meta name = "keyword" content = "Memory Game, easy javascript games"> 
   <meta name = "author" content = "Elaine Mary Rose">
 
-  <title> Test Your Memory | Home</title>
+  <title> Test Your Memory</title>
+  
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+  <script>
+    
+    $(document).ready(function() {
+
+      $(".image").fadeIn(200);
+      for( var i = 0; i<500; ++i){
+
+        $(".image").fadeToggle("4000");
+      }
+    });
+
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> 
   <link href="https://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet">
   
   <link rel = "icon" href = "icon.png">
