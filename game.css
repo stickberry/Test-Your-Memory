@@ -3,16 +3,38 @@ body {
 	background: black;
 	background-size: cover;
 }
+
+#main {
+
+	color: white;
+	display: inline;
+	font-family: 'Cinzel Decorative';
+	font-weight: bold;
+	font-size: 50px;
+	padding-left: 420px;
+}
+
+#move {
+
+	display: inline;
+	font-family: 'Cinzel';
+	float: right;
+	font-size: 25px;
+	color: white;
+	padding-top: 15px;
+	padding-right: 200px;
+}
+
 #board {
 
 	background: white;
 	background-size: cover;
-	
+	display: block;
 	width: 1170px;
-	height: 548px;
-	padding: 24px;
+	height: 543px;
+	padding: 15px;
 	margin: 0px auto;
-	margin-top: 25px;
+	margin-top: 10px;
 }
 
 div#board > div {
@@ -20,7 +42,7 @@ div#board > div {
 	background: url(cube.png) no-repeat;
 	border: #ffffff 2px solid;
 	width: 130px;
-	height: 75px;
+	height: 73px;
 	float: left;
 	margin: 10px;
 	padding: 20px;
