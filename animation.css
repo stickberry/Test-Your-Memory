@@ -24,7 +24,7 @@ body {
 .box {
 
   color: white;
-  font-family: 'Mouse Memoirs', sans-serif;
+  font-family: 'Mouse Memoirs', 'Cinzel';
   font-size: 70px;
   padding-top: 200px;
   text-align: center;
@@ -58,11 +58,6 @@ body {
 #green {
 
   color: #b2cb05;
-}
-
-img:hover {
-
-  height: 105px;
 }
 
 /* Fade in text and image animation. Source : stack overflow */
