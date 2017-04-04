@@ -7,7 +7,7 @@
 	<meta name = "keyword" content = "Memory Game, easy javascript games"> 
 	<meta name = "author" content = "Elaine Mary Rose">
 	
-	<title> Memory Game </title>
+	<title> Memory Game | Test Your Memory </title>
 	<link rel = "icon" href = "icon.png">
 
 	<script>
@@ -17,7 +17,11 @@
 		var cards_values = [];
 		var cards_tile_ids=[];
 		var counter; 
+		var score = 0;
+		var best = 0;
+		var game = 0;
 
+		
 		Array.prototype.cards_tile_shuffle = function() {
 
 			var i = this.length, j, temp;
@@ -33,10 +37,14 @@
 		function newBoard() {
 
 			counter = 60;
+			score = 0;
 			tiles_flipped = 0;
+			game = game + 1;
 			var ans = '';
 			cards_array.cards_tile_shuffle();
+			document.getElementById('game').innerHTML = game;
 			document.getElementById('moves').innerHTML = counter;
+			document.getElementById('pos').innerHTML = score;
 			for ( var i = 0; i < cards_array.length; ++i) {
 
 				ans = ans + '<div id="tile_'+i+'"onclick="fliptile(this,\''+cards_array[i]+'\')"></div>';
@@ -48,12 +56,13 @@
 
 			counter--;
 			document.getElementById('moves').innerHTML = counter;
-			if(counter < 0){
+			if(counter == 0){
 
-				alert("You're out of moves! Click to play again!");
+				alert("You're out of moves! Click to play again! Score : 0");
 				document.getElementById('board').innerHTML = "";
 				newBoard();
 			}
+
 			if(tile.innerHTML == "" && cards_values.length < 2) {
 
 				if(val == '1' || val == '7'){
@@ -101,9 +110,17 @@
 						cards_values = [];
 						cards_tile_ids = [];
 
+						score = score + 15;
+						document.getElementById('pos').innerHTML = score;
+
 						if(tiles_flipped == cards_array.length) {
 
-							alert("Board cleared... Generating New Board");
+							if(score > best){
+
+								best = score;
+							}
+
+							alert("Well Done! Click Okay to Play Again");
 							document.getElementById('board').innerHTML = "";
 							newBoard();
 						}
@@ -121,6 +138,9 @@
 
 							cards_values = [];
 							cards_tile_ids = [];
+
+							score = score - 5;
+							document.getElementById('pos').innerHTML = score;
 						}
 						setTimeout(flipback,500);
 					}
@@ -137,11 +157,12 @@
 </head>
 <body>
 
+	<div id = "score"> SCORE : <span id = "pos"> </span></div>
 	<div id = "main">
-		Ace it in 60!
+		GAME -  <span id = "game"></span>
 	</div>
 		<div id = "move">Moves left : <span> </span><span id = "moves"> </span></div>
-	<div id = "board"></div>
+	<div class = "effect" id = "board"></div>
 	<script>newBoard();</script>
 </body>
 </html>
