@@ -1,47 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
- 
-  <meta charset="UTF-8">
-  <meta name = "viewport" content = "width=device">
-  <meta name = "description" content = "Weather App">  
-  <meta name = "keyword" content = "Memory Game, easy javascript games"> 
-  <meta name = "author" content = "Elaine Mary Rose">
 
-  <title> Test Your Memory</title>
-  
+	<meta charset="UTF-8">
+	<meta name = "viewport" content = "width=device">
+  	<meta name = "description" content = "Weather App">  
+    <meta name = "keyword" content = "Memory Game, easy javascript games"> 
+  	<meta name = "author" content = "Elaine Mary Rose">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+	<title> Instructions | Test Your Memory</title>
+	<link rel = "icon" href = "icon.png">
 
-  <script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<script>
     
-    $(document).ready(function() {
+    	$(document).ready(function() {
 
-      $(".image").fadeIn(200);
-      for( var i = 0; i<500; ++i){
+      		$(".play").fadeIn(200);
+      		for( var i = 0; i<500; ++i){
 
-        $(".image").fadeToggle("4000");
-      }
-    });
+       		 	$(".play").fadeIn(1000);
+       		 	$(".play").fadeOut(1000);
+      		}
+    	});
 
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> 
-  <link href="https://fonts.googleapis.com/css?family=Mouse+Memoirs" rel="stylesheet">
-  
-  <link rel = "icon" href = "icon.png">
-  <link rel = "stylesheet" href = "animation.css">
-</head>
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet"> 
+	<link rel = "stylesheet" href = "game.css">
 
+</head>
 <body>
 
-  <div class = "box">
+	<div class = "page">
+		<div class = "heading"> Test Your Memory </div>
+		<div class = "instructions">
+			
+			<span class = "animate"> Welcome User! </span>
+			<p class = "howcon">  Constraints </p>
 
-    <span id = "red">T</span>E<span id = "orange">S</span><span id="blue">T </span><span id = "green">Y</span>O<span id="yellow">U</span><span id = "red">R</span><span id ="orange"> M</span>E<span id = "green">M</span><span id = "yellow">O</span><span id = "blue">R</span>Y<span id = "red">!</span>
-    <div class ="image">
-      <a href = "instructions.html"><img src = "memo.png"></a>
-    </div>
-  </div>
+			<p class ="secfade"> <span id = "level"> There are 3 levels </span>
+				
+				<p class = "play"><a href = "easy.html"> Easy  : <strong>70</strong> moves</a></p>
+				<p class = "play"><a href = "medium.html"> Medium : <strong>55</strong> moves</a></p>
+				<p class = "play"><a href = "difficult.html"> Difficult : <strong>45</strong>moves</a></p>
+				<p class = "score"> Every correct pair : <strong>+15</strong> points </p>
+				<p class = "score2"> Every incorrect pair : <strong>-5</strong> points </p>
+			</p>
+		</div>
+	<br><br>
+
+	</div>
 
 </body>
 </html>
