@@ -29,7 +29,7 @@ body {
 	display: inline;
 	font-family: 'Cinzel';
 	font-size: 25px;
-	margin-left: 130px;
+	margin-left: 160px;
 	padding-top: 15px;
 	
 }
@@ -52,7 +52,7 @@ body {
 	font-family: 'Cinzel Decorative';
 	font-weight: bold;
 	font-size: 50px;
-	padding-left: 340px;
+	padding-left: 260px;
 	
 }
 
@@ -64,7 +64,7 @@ body {
 	font-size: 25px;
 	color: white;
 	padding-top: 17px;
-	padding-right: 130px;
+	padding-right: 160px;
 	
 }
 
@@ -141,13 +141,13 @@ div#board > div {
 
 	background-color: #ffffff;
 	height: 500px;
-	width: 800px;
+	width: 60%;
 	margin: auto;
 	margin-top: 20px;
 
 	-moz-box-shadow:    inset 0 0 10px #000000;
-    	-webkit-box-shadow: inset 0 0 10px #000000;
-   	 box-shadow:        inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow:         inset 0 0 10px #000000;
 }
 
 
