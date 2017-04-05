@@ -141,13 +141,13 @@ div#board > div {
 
 	background-color: #ffffff;
 	height: 500px;
-	width: 60%;
+	width: 700px;
 	margin: auto;
 	margin-top: 20px;
 
 	-moz-box-shadow:    inset 0 0 10px #000000;
-    -webkit-box-shadow: inset 0 0 10px #000000;
-    box-shadow:         inset 0 0 10px #000000;
+    	-webkit-box-shadow: inset 0 0 10px #000000;
+   	 box-shadow:        inset 0 0 10px #000000;
 }
 
 
