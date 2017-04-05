@@ -2,7 +2,6 @@ body {
 
 	background: black;
 	background-size: cover;
-		background-color: #000000;
 	background-image: url(stars1.png),  url(stars2.png);
   	background-position: 0px 0px;
  	background-repeat: repeat-x, no-repeat;
@@ -37,7 +36,7 @@ body {
 
 #pos {
 
-	color: range;
+	color: orange;
 }
 
 #moves {
