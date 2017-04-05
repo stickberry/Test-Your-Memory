@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	<meta name = "viewport" content = "width=device">
+  	<meta name = "description" content = "Weather App">  
+    <meta name = "keyword" content = "Memory Game, easy javascript games"> 
+  	<meta name = "author" content = "Elaine Mary Rose">
+
+	<title> Instructions | Test Your Memory</title>
+	<link rel = "icon" href = "icon.png">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+	<script>
+    
+    	$(document).ready(function() {
+
+      		$(".play").fadeIn(200);
+      		for( var i = 0; i<500; ++i){
+
+       		 	$(".play").fadeIn(1000);
+       		 	$(".play").fadeOut(1000);
+      		}
+    	});
+
+  </script>
+
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet"> 
+	<link rel = "stylesheet" href = "game.css">
+
+</head>
+<body>
+
+	<div class = "page">
+		<div class = "heading"> Test Your Memory </div>
+		<div class = "instructions">
+			
+			<span class = "animate"> Welcome User! </span>
+			<p class = "how">  How Do I Win? </p>
+
+			<p class ="secfade"> <span id = "texts"> Match all 12 pairs of tiles according to the given</span> <span id = "italy"> <a href = "ins2.html"> constraints </a></span> <br> <img src = "img1.png"></p>
+
+			<p class = "play"><a href = memory.html> Play Now </a></p>
+		</div>
+	<br><br>
+
+	</div>
+
+</body>
+</html>
