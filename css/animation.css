@@ -2,7 +2,7 @@ body {
 
   margin: 0px;
   background-color: #111;
-  background-image: url(stars2.png), url(stars1.png), url(back.jpg);
+  background-image: url(../images/stars2.png), url(../images/stars1.png), url(../images/back.jpg);
   background-position: 120% 70px, 0px 0px, 0px 0px;
   background-repeat: no-repeat, repeat-x, repeat-x;
   animation: animate-background linear 50s infinite;

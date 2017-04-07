@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name = "viewport" content = "width=device">
-	<meta name = "description" content = "Weather App">  
-	<meta name = "keyword" content = "Memory Game, easy javascript games"> 
-	<meta name = "author" content = "Elaine Mary Rose">
-	
-	<title> Memory Game | Test Your Memory </title>
-	<link rel = "icon" href = "icon.png">
-
-	<script>
-		
-		var cards_array = ['1','1','2','2','3','3','4','4','5','5','6','6','7','7','8','8','9','9','10','10','11','11','12','12'];
+var cards_array = ['1','1','2','2','3','3','4','4','5','5','6','6','7','7','8','8','9','9','10','10','11','11','12','12'];
 		var tiles_flipped = 0;
 		var cards_values = [];
 		var cards_tile_ids=[];
@@ -36,7 +22,7 @@
 
 		function newBoard() {
 
-			counter = 60;
+			counter = 55;
 			score = 0;
 			tiles_flipped = 0;
 			game = game + 1;
@@ -58,7 +44,7 @@
 			document.getElementById('moves').innerHTML = counter;
 			if(counter < 0){
 
-				alert("You're out of moves! Click to play again! Score : 0");
+				alert("You're out of moves! Click to play again!");
 				document.getElementById('board').innerHTML = "";
 				newBoard();
 			}
@@ -131,9 +117,9 @@
 
 							var tile_1 = document.getElementById(cards_tile_ids[0]);
 							var tile_2 = document.getElementById(cards_tile_ids[1]);
-							tile_1.style.background = 'url(cube.png) no-repeat';
+							tile_1.style.background = 'url(../images/cube.png) no-repeat';
 							tile_1.innerHTML = "";
-							tile_2.style.background = 'url(cube.png) no-repeat';
+							tile_2.style.background = 'url(../images/cube.png) no-repeat';
 							tile_2.innerHTML = "";
 
 							cards_values = [];
@@ -147,22 +133,3 @@
 				}
 			}
 		}
-  
-	</script>
-	
-	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet"> 
-	<link rel = "stylesheet" href = "game.css">
-
-</head>
-<body>
-
-	<div id = "score"> SCORE : <span id = "pos"> </span></div>
-	<div id = "main">
-		GAME -  <span id = "game"></span>
-	</div>
-		<div id = "move">Moves left : <span> </span><span id = "moves"> </span></div>
-	<div class = "effect" id = "board"></div>
-	<script>newBoard();</script>
-</body>
-</html>
