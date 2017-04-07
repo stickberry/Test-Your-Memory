@@ -2,7 +2,7 @@ body {
 
 	background: black;
 	background-size: cover;
-	background-image: url(stars1.png),  url(stars2.png);
+	background-image: url(../images/stars1.png),  url(../images/stars2.png);
   	background-position: 0px 0px;
  	background-repeat: repeat-x, no-repeat;
   	animation: animate-background linear 30s infinite;
@@ -82,7 +82,7 @@ body {
 
 div#board > div {
 
-	background: url(cube.png) no-repeat;
+	background: url(../images/cube.png) no-repeat;
 	border: #ffffff 2px solid;
 	width: 130px;
 	height: 73px;
@@ -108,7 +108,7 @@ div#board > div {
 .page {
 
 	background-color: #000000;
-	background-image: url(stars1.png),  url(stars2.png);
+	background-image: url(../images/stars1.png),  url(../images/stars2.png);
   	background-position: 0px 0px;
  	background-repeat: repeat-x, no-repeat;
   	animation: animate-background linear 30s infinite;
