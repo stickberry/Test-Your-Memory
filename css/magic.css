@@ -11,6 +11,7 @@ Copyright (c) 2016 Christian Pucci
 
 .puffIn {
   animation-name: puffIn;
+  animation-duration: 0.3s;
 }
 @keyframes puffIn {
   0% {
